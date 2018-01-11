@@ -8,10 +8,7 @@ class RegistryController < ApplicationController
   end
 
   def create
-    p "this is the create method"
-    p params
-    @registry = Registry.new(params[:regsitry])
-    p @registry
+    @registry = Registry.new(registry_params)
     @registry.save
   end
 
@@ -27,8 +24,8 @@ class RegistryController < ApplicationController
   def destroy
   end
 
-  # private
-  # def registry_params
-  #   params.require(:user).permit(:username, :email, :password, :password_confirmation)
-  # end
+  private
+  def registry_params
+    params.require(:registry).permit(:title, :description, :deadline, :user_id)
+  end
 end

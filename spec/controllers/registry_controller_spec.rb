@@ -27,12 +27,12 @@ RSpec.describe RegistryController, type: :controller do
 
   describe "GET #create" do
     before(:each) do
-      post :create, params: {registry: {title: "Coat Drive", description: "We're collecting coats for the community, we appreciate all your help as it goes toward keeping members of our community warm.", deadline:'(2018, 2, 3)', user_id: user.id}}
+      post :create, params: {registry: {title: "Coat Drive", description: "We're collecting coats for the community, we appreciate all your help as it goes toward keeping members of our community warm.", deadline: DateTime.new(2018,2,3), user_id: user.id}}
     end
-    xit "returns http success" do
+    it "returns http success" do
       expect(response).to have_http_status(:success)
     end
-    xit "assigns a user variable" do
+    it "assigns a user variable" do
       expect(assigns[:registry]).to be_a Registry
     end
     it "creates a user in the user table" do
