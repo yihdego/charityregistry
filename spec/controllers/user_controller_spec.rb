@@ -3,9 +3,15 @@ require 'rails_helper'
 RSpec.describe UserController, type: :controller do
 
   describe "GET #new" do
+    before(:each) {get :new}
     it "returns http success" do
-      get :new
       expect(response).to have_http_status(:success)
+    end
+    it "renders new view" do
+      expect(response).to render_template(:new)
+    end
+    it "assigns user variable" do
+      expect(assigns[:user]).to be_a User
     end
   end
 
