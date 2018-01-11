@@ -1,5 +1,9 @@
 class RegistryController < ApplicationController
   def index
+    @registries = Registry.all
+  end
+
+  def new
   end
 
   def create
@@ -14,6 +18,6 @@ class RegistryController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
   end
 end

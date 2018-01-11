@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :test do
+  gem 'rails-controller-testing'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
 end

@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/edit'
+
+  get 'user/update'
+
+  get 'user/delete'
+
+  get 'user/show'
+
+  get 'user/index'
+
+  get 'registry/destroy'
+
+  get 'registry/new'
+
   get 'registry/index'
 
   get 'registry/create'
