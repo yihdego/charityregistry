@@ -1,2 +1,10 @@
-<h1>Registry#new</h1>
-<p>Find me in app/views/registry/new.html.erb</p>
+<h1>Let us help you advertize your charity</h1>
+<p>We'll need a few things.</p>
+<p>What is your Charity's name<p>
+
+
+<%= form_for @registry, url: {action: "create"}, html: {class: "registry_form"} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description %>
+  <%= f.submit "Create" %>
+<% end %>
