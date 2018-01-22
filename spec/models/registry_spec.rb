@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Registry, type: :model do
   let!(:user) { User.create(username: 'yihdego')}
+  # list = FactoryBot build(:registry)
   let!(:list) { Registry.create(title: 'Coat Drive', description: "We're collecting coats for the community, we appreciate all your help as it goes toward keeping members of our community warm.", deadline: DateTime.new(2018,2,3), user_id: user.id)}
   describe 'attributes' do
     it 'has a title'  do

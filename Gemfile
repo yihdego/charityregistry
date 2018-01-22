@@ -36,9 +36,9 @@ gem 'jbuilder', '~> 2.5'
 group :test do
   gem 'rails-controller-testing'
   gem 'database_cleaner'
-  gem 'factory_bot_rails'
   gem 'faker'
   gem 'timecop'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development, :test do

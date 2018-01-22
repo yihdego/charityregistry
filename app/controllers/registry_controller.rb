@@ -13,6 +13,7 @@ class RegistryController < ApplicationController
   end
 
   def show
+    @registry = Registry.find(params[:id])
   end
 
   def edit
