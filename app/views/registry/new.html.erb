@@ -3,8 +3,9 @@
 <p>What is your Charity's name<p>
 
 
-<%= form_for @registry, url: {action: "create"}, html: {class: "registry_form"} do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :description %>
-  <%= f.submit "Create" %>
-<% end %>
+  <%= form_for @registry, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :description, size: "60x12" %>
+    <%= f.date_select :deadline %>
+    <%= f.submit "Create" %>
+  <% end %>
