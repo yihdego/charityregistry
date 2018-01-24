@@ -8,8 +8,11 @@ class RegistryController < ApplicationController
   end
 
   def create
+    user = User.find(1)
     @registry = Registry.new(registry_params)
+    @registry.user = user
     @registry.save
+    redirect_to registry_path(@registry.id)
   end
 
   def show
